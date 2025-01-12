@@ -34,7 +34,7 @@ class Controller {
         }
     }
 
-   /*  static async updateData(req, res, next) {
+     static async updateData(req, res, next) {
         try {
             const data = req.body;
             await Model.updateData(data);
@@ -55,7 +55,7 @@ class Controller {
             console.error(error);
             next(error);
         }
-    } */
+    } 
 }
 
 module.exports = Controller;
