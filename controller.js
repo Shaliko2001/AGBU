@@ -56,6 +56,15 @@ class Controller {
             next(error);
         }
     } 
+
+    static async uploadFile(req, res, next){
+        try{
+            console.log(req.file)
+        }catch(error){
+            console.error(error)
+            next(error)
+        }
+    }
 }
 
 module.exports = Controller;

@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const cors = require('cors');//cros origin resource shairing
 const morgan = require("morgan");
@@ -5,6 +6,7 @@ const {createLogger,format} = require("winston"); //poxarinum e console-in
 //const User = require('./mongo.schema');
 const app = express();
 app.use(express.json());
+app.use("/image", express.static("static"));
 const api = require('./router');
 //application program interface
 const corsOptions = {
@@ -29,7 +31,7 @@ res.send("hello world")
 })
 
 require('dotenv').config();
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 
 app.listen(port, () => {
