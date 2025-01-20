@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <title>Chat App</title>
+</head>
+<body>
+  <h1 class="title">Node.js Team 💬</h1>
+  <div class="main">
+    <div class="name">
+      <div class="profile-icon" id="profile-icon">
+        <input class="upload" type="file" id="upload" style="display: none;">
+        <img id="profile-img" src="" alt="Profile Image" style="display: none;">
+        <i class="far fa-user"></i>
+      </div>
+      <input
+        type="text"
+        id="name-input"
+        class="name-input"
+        placeholder="Enter your nickname"
+        maxlength="20"
+      />
+      <button id="save-button" class="save-button">Save</button>
+    </div>
+
+    <ul class="message-container" id="message-container"></ul>
+
+    <form class="message-form" id="message-form">
+      <input
+        type="text"
+        name="message"
+        id="message-input"
+        class="message-input"
+        placeholder="Type your message..."
+      />
+      <button type="submit" class="send-button">
+        Send <span><i class="fas fa-paper-plane"></i></span>
+      </button>
+      <button type="button" id="record-button" class="record-button">
+        <i class="fas fa-microphone"></i>
+      </button>
+    </form>
+  </div>
+  <h3 class="clients-total" id="client-total">Total clients: 0</h3>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+  
+  <!-- Your Custom JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
